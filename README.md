@@ -1,2 +1,2 @@
 # Create-numerical-list
-You can make a list of numbers with any number of digits with this program
+# This is an aplication for who like create list 
