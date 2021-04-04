@@ -1,21 +1,26 @@
 #!/usr/bin/env python3
 
+class Listcreator:
+    def __init__(self, number_length, path):
+        self.number_length = number_length
+        self.path = path
 
-def addZiros(value):
-    ''' we add ziros to the first part of number'''
-    if len(str(value)) < number_length :
-        ziros = number_length - len(str(value))
-        return (ziros * '0' + str(value))
-    else :
-        return str(value)
+    def addziros(self, value):
+        """we add ziros to the first part of number"""
+        if len(str(value)) < self.number_length:
+            ziros = self.number_length - len(str(value))
+            return ziros * '0' + str(value)
+        else:
+            return str(value)
 
-def write_list(path):
-    with open(path,'w') as file:
-        for i in map(addZiros,range( 1 , int(str(1) +  number_length  * '0') + 1 )):
-            file.write(i + '\n')
-        file.close()
+    def write_list(self):
+        """write the numbers line by line in the file"""
+        with open(self.path, 'w') as file:
+            for i in map(self.addziros, range(1, int(str(1) + self.number_length * '0') + 1)):
+                file.write(i + '\n')
+            file.close()
+
 
 if '__main__' == __name__:
-    number_length =int(input("Entre you numer of digits :"))
-    path = input("Enter your path to save : ")
-    write_list(path)
+    A = Listcreator(int(input("enter number length :")), input("enter the Path :"))
+    A.write_list()
