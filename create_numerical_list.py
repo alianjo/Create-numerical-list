@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-
+from colorama import Fore
 class Listcreator:
     def __init__(self, number_length, path):
         self.number_length = number_length
@@ -22,5 +22,5 @@ class Listcreator:
 
 
 if '__main__' == __name__:
-    A = Listcreator(int(input("enter number length :")), input("enter the Path :"))
+    A = Listcreator(int(input(Fore.RED + "[*]" + " Enter number length :")), input(Fore.RED + "[*]" + " Enter the Path :"))
     A.write_list()
