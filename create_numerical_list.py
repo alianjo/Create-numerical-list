@@ -22,5 +22,5 @@ class Listcreator:
 
 
 if '__main__' == __name__:
-    A = Listcreator(int(input(Fore.RED + "[*]" + " Enter number length :")), input(Fore.RED + "[*]" + " Enter the Path :"))
+    A = Listcreator(int(input(Fore.RED + "[*]" + Fore.CYAN + " Enter number length :")), input(Fore.RED + "[*]" + Fore.CYAN + " Enter the Path :"))
     A.write_list()
